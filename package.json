@@ -1,0 +1,36 @@
+{
+  "name": "journyl-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write '**/*.{js,ts,jsx,tsx,json,css,md,html}'"
+  },
+  "packageManager": "pnpm@9.12.2",
+  "pnpm": {
+    "patchedDependencies": {
+      "eslint@9.8.0": "patches/eslint@9.8.0.patch",
+      "eslint-plugin-path-alias@2.1.0": "patches/eslint-plugin-path-alias@2.1.0.patch"
+    },
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "eslint-plugin-import",
+        "eslint"
+      ]
+    }
+  },
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^2.10.1",
+    "eslint": "9.8.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-path-alias": "2.1.0",
+    "eslint-plugin-simple-header": "^1.2.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "is-path-inside": "^4.0.0",
+    "prettier": "^3.3.3",
+    "typescript-eslint": "^8.13.0"
+  }
+}
