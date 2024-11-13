@@ -1,3 +1,4 @@
+/* ---------------------------------- root ---------------------------------- */
 :root {
   --rosewater: #f4dbd6;
   --flamingo: #f0c6c6;
@@ -29,6 +30,9 @@
   font-weight: 400;
   font-size: 16px;
 }
+/* ------------------------------ compatibility ----------------------------- */
+
+/* -------------------------------- elements -------------------------------- */
 body,
 html {
   margin: 0;
@@ -37,4 +41,39 @@ html {
   width: 100%;
   background-color: var(--crust);
   color: var(--text);
+}
+a {
+  color: var(--lavender);
+}
+a:hover {
+  color: var(--blue);
+}
+/* --------------------------------- footer --------------------------------- */
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--mantle);
+  color: var(--text);
+  flex-wrap: wrap;
+}
+
+#footer-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
 }
